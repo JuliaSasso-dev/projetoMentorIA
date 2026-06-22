@@ -6,11 +6,11 @@
 }
 
 body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #2c1808, #ee4dbe);
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: linear-gradient(135deg, #c9d7ee, #2e109b);;
+  padding: 0;
 }
-
 .container {
   min-height: 100vh;
   display: flex;
@@ -19,30 +19,34 @@ body {
 }
 
 .card {
-  width: 400px;
-  background: white;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  background: #fff;
+  border-radius: 18px; /* bordas mais suaves */
+  padding: 25px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+  border: 1px solid #e6e6e6; /* borda leve para destacar */
+  transition: all 0.3s ease;
 }
-
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(5, 5, 5, 0.18);
+}
 .logo {
   text-align: center;
   margin-bottom: 20px;
 }
 
 .logo h1 {
-  color: #1f4b99;
+  color: #3560aa;
 }
 
 .logo span {
-  color: orange;
+  color: rgba(165, 5, 112, 0.836);
 }
 
 .titulo {
   text-align: center;
   margin-bottom: 20px;
-  color: #1f4b99;
+  color: #000000;
 }
 
 .form-group {
@@ -58,25 +62,29 @@ body {
 
 .form-group input {
   padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 25px;
+  border: 1px solid #d0d0d0;
+  border-radius: 30px; /* mais arredondado */
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
-
+.form-group input:focus {
+  border-color: #a56fe2;
+  box-shadow: 0 0 8px rgba(184, 69, 212, 0.438);
+  outline: none;
+}
 .btn {
-  background: #ff9800;
-  color: white;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #ff6600, #eb0bff);
   border: none;
-  padding: 10px 18px;
-  border-radius: 25px;
+  color: #fff;
+  font-weight: 600;
+  padding: 12px 20px;
   cursor: pointer;
-  font-weight: bold;
-  transition: 0.3s;
+  transition: all 0.3s ease;
 }
 
 .btn:hover {
-  opacity: 0.9;
+   background: linear-gradient(135deg, #cf20f1, #eb87ff);
   transform: scale(1.05);
-  background: #e68900;
 }
 
 .btn:disabled {
@@ -131,16 +139,20 @@ body {
 }
 
 .sidebar {
-  width: 220px;
-  background: #0d3b82;
-  color: white;
-  min-height: 100vh;
+  background: linear-gradient(135deg, #cf6721, #b91994); /* rosa degradê */
+  color: #ffffff;
   padding: 20px;
-  box-shadow: 3px 0 10px rgba(0,0,0,0.1);
+  width: 220px;
+  min-height: 100vh;
+
+  border-radius: 0 20px 20px 0; /* borda arredondada no lado direito */
+  border: 3px solid #ac6dc5;   /* rosa claro para destacar */
+  box-shadow: 4px 0 12px rgba(243, 243, 243, 0.4); /* sombra lateral */
+  transition: all 0.3s ease;
 }
 
 .sidebar h2 {
-  color: #8f81c0;
+   color: rgba(165, 5, 112, 0.836);
   margin-bottom: 30px;
 }
 
@@ -159,13 +171,17 @@ body {
 
 .header {
   height: 70px;
-  background: #173f7a;
-
+  background: linear-gradient(135deg, #b85411, #8f0e88); /* cinza degradê */
+  
   display: flex;
   justify-content: flex-end;
   align-items: center;
-
   padding: 0 20px;
+
+  border-bottom: 3px solid #b57bc4; /* borda rosa clara */
+  border-radius: 0 0 15px 15px;      /* cantos inferiores arredondados */
+  box-shadow: 0 4px 10px rgba(242, 238, 243, 0.4); /* sombra suave */
+  transition: all 0.3s ease;
 }
 
 .principal {
@@ -177,19 +193,23 @@ body {
 }
 
 .card {
-  background: white;
-  border-radius: 10px;
+   background: #fff;
+  border-radius: 12px;
   padding: 20px;
-  box-shadow: 0px 0px 8px rgba(0,0,0,.1);
+  margin: 20px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
 }
 
 .aula {
   display: flex;
   justify-content: space-between;
-  margin-top: 15px;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #e0e0e0; /* linha separadora */
 }
 .btn-aula {
-  background: orange;
+  background: rgb(167, 67, 125);
   color: white;
   border: none;
   padding: 8px 15px;
